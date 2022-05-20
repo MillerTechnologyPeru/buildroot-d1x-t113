@@ -62,11 +62,12 @@ Online documentation can be found at http://buildroot.org/docs.html
 
 To build and use the buildroot stuff, do the following:
 
-1) run 'make menuconfig'
-2) select the target architecture and the packages you wish to compile
-3) run 'make'
-4) wait while it compiles
-5) find the kernel, bootloader, root filesystem, etc. in output/images
+1) source envsetup.sh
+2) lunch
+3) make mangopi_xxx_defconfig
+4) make
+5) wait while it compiles
+6) find the kernel, bootloader, root filesystem, etc. in output/images
 
 You do not need to be root to build or run buildroot.  Have fun!
 
