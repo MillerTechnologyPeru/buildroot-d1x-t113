@@ -37,7 +37,7 @@ alias sync_kernel="rm -rf output/build/linux* && rm -rf output/build/.linux* && 
 alias sync_uboot="rm -rf output/build/uboot* && make"
 
 # config
-alias sm="make savedefconfig"
+alias sconfig="make savedefconfig"
 alias skernel="make linux-update-defconfig"
 alias suboot="make uboot-update-defconfig"
 

@@ -56,31 +56,35 @@
 Buildroot is a simple, efficient and easy-to-use tool to generate embedded
 Linux systems through cross-compilation.
 
-The documentation can be found in docs/manual. You can generate a text
-document with 'make manual-text' and read output/docs/manual/manual.text.
-Online documentation can be found at http://buildroot.org/docs.html
-
-To build and use the buildroot stuff, do the following:
-
+The Online documentation can be found at http://buildroot.org/docs.html
+```
+## Build dependencies:
+```
+1) sudo apt-get update
+2) sudo apt-get install rsync wget unzip build-essential git bc swig libncurses-dev libpython3-dev libssl-dev python3-distutils android-tools-mkbootimg mtools
+ -y
+```
+## Build source, do the following:
+```
 1) source envsetup.sh
 2) lunch
 3) make mangopi_xxx_defconfig
 4) make
 5) wait while it compiles
 6) find the kernel, bootloader, root filesystem, etc. in output/images
-
-You do not need to be root to build or run buildroot.  Have fun!
-
-Buildroot comes with a basic configuration for a number of boards. Run
-'make list-defconfigs' to view the list of provided configurations.
-
-Please feed suggestions, bug reports, insults, and bribes back to the
-buildroot mailing list: buildroot@buildroot.org
-You can also find us on #buildroot on Freenode IRC.
-
-If you would like to contribute patches, please read
-https://buildroot.org/manual.html#submitting-patches
 ```
+## Tips
+```
+1) You do not need to be root to build or run buildroot.  Have fun!
+2) "mkernel" for build or rebuild linux kernel and dts
+3) "muboot" for build or rebuild uboot
+4) "m" for make
+5) "sync_kernel","sync_uboot" for resync the source code
+6) "sconfig" for save buildroot config
+7) "skernel" for save linux config
+8) "suboot" for save uboot config
+```
+
 
 
 <!----------------------------------------------------------------------------->
